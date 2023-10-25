@@ -6,8 +6,8 @@ import { ProductService } from '../products.service'
 import { ActivatedRoute } from '@angular/router';
 import { Cart } from '../cart';
 
-import * as FileSaver from 'file-saver';
-import * as xlsx from 'xlsx';
+// import * as FileSaver from 'file-saver';
+// import * as xlsx from 'xlsx';
 import * as XLSX from 'xlsx';
 import  {jsPDF} from 'jspdf';
 
