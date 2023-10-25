@@ -1,0 +1,11 @@
+
+<div class="mat">
+  <h1 mat-dialog-title> tim kirm
+     {{data.name}}</h1>
+<input type="text" [(ngModel)]="find">
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button  mat-button [mat-dialog-close]="data.animal" cdkFocusInitial  (click)="save()" >SAVE</button>
+</div>
+
+</div>

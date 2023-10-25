@@ -1,0 +1,286 @@
+.titledetail{
+  padding-top: 150px;
+  text-align: center;
+}
+.title>div{
+  margin-right: 10px;
+  margin-left: 10px;
+  font: 15px Jost,sans-serif;
+}
+.title>div:hover{
+ color:  #b62e2e;
+}
+
+
+.text{
+  margin-top: 30px;
+  float: left;
+  .pricesSales{
+    font-weight: 600;
+  }
+  .price{
+    text-decoration-line:line-through;
+    margin-left: 10px;
+    opacity: 0.5;
+  }
+  .sale{
+    margin-left: 20px;
+    min-width: 60px;
+    min-height: 27px;
+  border: 1px solid black;
+  text-align: center;
+  }
+}
+
+.content{
+  width: 100%;
+  .article{
+
+    min-height: 500px;
+    //border: 1px solid red;
+
+
+    img{
+
+
+       min-height: 80%;
+       min-width: 80%;
+
+     }
+  }
+  .asside{
+      max-width: 600px;
+    min-height: 500px;
+    //border: 1px solid blue;
+  }
+}
+
+.p{
+  margin-top: 20px;
+  .cp1{
+    margin-left: 10px;
+    svg{
+      margin-right: 10px;
+    }
+  }
+  .cp{
+    margin-left: 10px;
+    opacity: 0.5;
+
+  }
+}
+
+.addtocart{
+  // width: 200px;
+  // height: 40px;
+
+  // background-color: black;
+  // color: white;
+  p{
+    font-size: small;
+    margin: auto;
+    font-weight: bold;
+  }
+}
+.addtocart:hover{
+  // transition: all 0.3s ease-out ;
+  // width: 200px;
+  // height: 40px;
+  // //text-align: center;
+  // background-color: rgb(242, 80, 80);
+  // // color: white;
+  // p{
+  //   font-size: small;
+  //   margin: auto;
+  //   font-weight: bold;
+  // }
+}
+
+
+
+
+.nav-item {
+  border: 1px solid rgb(185, 185, 185);
+  text-align: center;
+  display: flex;
+  min-width: 100px;
+  min-height: 45px;
+  margin-left: 50px;
+  margin-top: 10px;
+  position: relative;
+  display: inline-block;
+  .nav-link {
+    min-height: 45px;
+    border-radius: 0;
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #000;
+    text-decoration: none;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  }
+  .nav-link.active {
+    //transition: all 0.8s ease-out;
+    color: #fff;
+    background-color: #01050b;
+    border-color: #007bff;
+
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+  }
+  .nav-link:hover {
+    transition: all 0.8s ease-out;
+    color: #fff;
+    background-color: #01050b;
+    border-color: #007bff;
+  }
+}
+.tabshow{
+  width: 97%;
+  margin-top: 40px;
+  margin-left: 3%;
+  margin-right: 3%;
+  padding: 0;
+//width: 100%;
+min-height: 500px;
+//border: 1px solid black;
+h1{
+
+}
+p{
+  max-width: 90%;
+  line-height: 32px;
+
+    opacity: 0.8;
+}
+}
+.text2>div>ul{
+  list-style-type: none;
+  li{
+
+    list-style-type: square;
+
+  }
+
+}
+
+.textright>ul>{
+
+
+
+}
+.textright>ul>li>svg{
+  margin-right: 2%;
+  box-shadow: 0 0 10px #ccc;
+
+}
+div.col-lg-6.col-md-12.col-sm-12.textright ul li {
+  display: flex ;
+  list-style-type: none;
+
+}
+.reviewerimg{
+
+  //border: 1px solid red;
+
+  min-height: 100px;
+  img{
+    max-height: 85px;
+    min-height: 85px;
+    max-width: 85px;
+    min-width: 85px;
+    border-radius: 50%;
+  };
+
+    p{
+      padding: 10px;
+    }
+
+}
+.reviewercomment{
+  overflow: auto;
+  border: 1px solid rgb(185, 185, 185);
+  ;
+  height: 100px;
+  p{
+    opacity: 10;
+  }
+  .iconstarts{
+    max-width: 25px;
+    max-height: 25px;
+  }
+
+}
+.reviewercomment:hover{
+  transition:.6s;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+}
+
+.reviews{
+ margin-top: 20px;
+}
+.addyourcomment
+{
+  margin-top: 50px;
+
+  .row{
+    margin-top: 100px;
+  }
+}
+
+.inputname{
+ // border: 1px solid rgb(168, 97, 97);
+
+margin-top: 100px;
+
+.input{
+  min-height: 50px;
+  border-radius: 0;
+  width: 91%;
+ border: 1px solid rgb(175, 171, 171);
+}
+
+}
+
+.name{
+  display: flex;
+  flex-direction: column;
+  .input1 {
+    min-height: 50px;
+    border-radius: 0;
+
+   border: 1px solid rgb(175, 171, 171);
+    width: 100%;
+    order: 1;
+  }
+  //border: 1px solid rgb(168, 97, 97);
+}
+.email{
+  display: flex;
+  flex-direction: column;
+  input {
+    order: 1;
+  }
+  // phần tử con năm dọc
+
+  //align-items: left;
+  //height: 55px;
+  //border: 1px solid rgb(168, 97, 97);
+}
+.comments{
+
+ // border: 1px solid rgb(168, 97, 97);
+  margin-bottom: 100px;
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  input {
+    order: 1;
+  }
+
+}
+
+.iconstarts{
+  max-width: 25px;
+  max-height: 25px;
+}

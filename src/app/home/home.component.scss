@@ -1,0 +1,301 @@
+
+.animation_mode>img{
+   position: absolute;
+   width: 100px;
+   height: 100px;
+   float: left;
+
+ }
+ .animation_mode>h1{
+
+   padding-top: 40px;
+   font-size: medium;
+   float: left;
+   //position: absolute;
+ }
+ #menu{
+   margin-bottom: 20px;
+ }
+ .animation_mode{
+position: relative;
+   //position: relative;
+   animation-name: example;
+   animation-duration: 17s;
+   animation-timing-function: linear;
+   animation-delay: 0s;
+   animation-iteration-count: infinite;
+   animation-direction: alternate;
+   h1{
+
+    padding-top: 40px;
+    font-size: medium;
+    float: left;
+    //position: absolute;
+  }
+  img{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    float: left;
+
+  }
+ }
+ @keyframes example {
+   0%   { left:0%; right:0%;}
+   25%  { left:100%; right:0%;}
+   50%  { left:100%; right:100%;}
+   75%  {left:0%; right:100%;}
+   100% { left:0%; right:0%;}
+ }
+//  .btn {
+// background-color: #000;
+// color: white;
+//  }
+
+ #innerbox{
+
+ width: 100%;
+ padding: auto;
+ margin: 0;
+ margin-bottom: 20px;
+ //text-align: left;
+p{
+ padding-left: 7%;
+}
+
+
+ }
+
+ #innerbox>p{
+ font-family: Geneva,Tahoma,Verdana,sans-serif;
+  font-size: 35px;
+  margin: auto;
+  }
+
+// .carousel-item{
+//   height: 700px;
+//   background: #000;
+//   color: white;
+//   position: relative;
+// }
+// .container{
+//   position: absolute;
+//   bottom: 0;
+//   left: 8%;
+//   right: 2%;
+//   padding-bottom: 100px;
+// }
+// .overlay-img{
+
+//   position: absolute;
+//   bottom: 0;
+//   left: 0;
+//   right: 0;
+//   top: 0;
+//   background-position: center;
+//   background-size: cover;
+//   opacity: 0.5;
+//   width: 100%;
+//   padding: 0px 0px;
+
+// }
+// .overlay-img>img{
+//   width: 100%;
+//   height: 700px;
+
+// }
+#header{
+  margin: 0;
+width: 100%;
+  padding: 0px 0px;
+}
+
+.saleblock{
+  width: 100%;
+  margin: auto;
+ //border: 1px solid red;
+}
+
+.saleblock > .block {
+  //width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img{
+    //border: 1px solid rgb(146, 187, 25);
+
+
+  height: 90%;
+    max-width: 80% ;
+    min-width: 80%;
+
+  }
+}
+
+
+.block{
+  //width: 50%;
+  height: 282px;
+  //border: 1px solid blue;
+  //margin:  auto;
+  //min-width: 643px ;
+}
+.container-fluid{
+padding: 0px 0px;
+}
+#cards{
+  //border: 1px solid blue;
+  //width: 100%;
+  min-height: 300px;
+  margin-left: 0;
+  //position: relative;
+}
+.mcarousel-itemblock4{
+  //flex-direction: row;
+
+}
+div#block4.row{
+  margin: 0 0 0 0;
+}
+#myCarouselblock4>div.card.card-body{
+  float: left;
+}
+
+.shopnow>h5{
+
+  margin: auto;
+text-align: center;
+  color: white;
+  padding-top: 6px;
+
+}
+.shopnow{
+  width: 100px;
+  height: 40px;
+  background-color: #000;
+  margin: auto;
+  width: 200px;
+  height: 40px;
+  color: white;
+  flex: display;
+  font: 15px Jost,sans-serif;
+}
+
+.shopnow:hover{
+ background-color:  #b62e2e;
+}
+.productBlock4{
+  //border: 1px solid black;
+  width: 100%;
+  margin: auto;
+}
+.cart1{
+  margin: auto;
+  button{
+    border: none;
+    background-color: rgb(242, 80, 80);
+    color: white;
+    height: 40px;
+  }
+  button:hover{
+    transition: all 0.3s ease-in-out;
+    border: none;
+    background-color: rgb(6, 6, 6);
+    color: white;
+    height: 40px;
+  }
+}
+
+
+
+.card:hover  {
+
+  transform: rotatex(0deg);
+  transition:.6s;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+  //background: linear-gradient(rgb(93,94,170),rgb(93,66,103));
+
+img{
+  transform: scale(1.25) rotate(2deg);
+}
+}
+
+
+
+
+.ngx-pagination a, .ngx-pagination button {
+ display: none;
+}
+.clearfix{
+
+  .feature-block{
+
+    border: 1px solid rgb(236, 235, 235);
+ padding: 0;
+  }
+  .content{
+     // display: flex;
+
+  }
+  svg{
+    max-height: 40px;
+    max-width: 40px;
+  }
+  .flaticon-fast{
+    max-height: 40px;
+    max-width: 40px;
+    padding: 0;
+  }
+}
+.featured-section{
+  width: 70%;
+  margin: auto;
+}
+
+.filters{
+  ul li {
+
+    float: left;
+    margin-right: 10px;
+    padding: 10px;
+    display: inline-block;
+  }
+margin: auto;
+}
+.filter-tabs{
+  li{
+    cursor: pointer;;
+
+  }
+
+  .active{
+    color: #f48181;
+   }
+   .nonactive{
+    color: #0b0b0b;
+   }
+
+// .disabled {
+//   pointer-events: none;
+//   cursor: default;
+// }
+margin: auto;
+}
+.active-list-item {
+  color: #f48181;
+  text-decoration: underline;
+}
+.inner{
+  margin: auto;
+  height: 126px;
+  width: 80%;
+  border: 1px dashed rgb(209, 209, 209);
+  img{
+    min-width: 138px;
+    max-width: 41px;
+    min-height:41px ;
+  }
+}
+
+
+

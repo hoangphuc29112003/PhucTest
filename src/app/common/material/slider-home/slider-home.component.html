@@ -1,0 +1,52 @@
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="overlay-img">
+        <img src="../assets/images/slide1.jpg" alt="">
+      </div>
+      <!-- <div class="container">
+        <h1>Buttons</h1>
+        <p>Use Bootstrap’s custom button styles for actions in forms, dialogs
+          and more with support for multiple sizes, states, and more.</p>
+        <button type="button" class="btn ">Shop</button>
+      </div> -->
+
+      <!-- <img src="../assets/images/slideshow_1.jpg" class="d-block w-100" alt="..."> -->
+      <app-slider-text-home [items]=" slide1"></app-slider-text-home>
+    </div>
+    <div class="carousel-item">
+      <div class="overlay-img">
+        <img src="../assets/images/slide2.jpg" alt="">
+      </div>
+      <!-- <div class="container">
+        <h1>EASY TO CLEAN READY FOR LIFE</h1>
+        <p>Use Bootstrap’s custom button styles for actions in forms, dialogs, and more with support for multiple
+          sizes, states, and more.</p>
+        <button type="button" class="btn ">Shop</button>
+      </div> -->
+      <app-slider-text-home [items]=" slide2"></app-slider-text-home>
+    </div>
+    <div class="carousel-item">
+      <div class="overlay-img">
+        <img src="../assets/images/slide3.jpeg" alt="">
+      </div>
+      <!-- <div class="container">
+        <h1>Buttons</h1>
+        <p>Use Bootstrap’s custom button styles for actions in forms, dialogs, and more with support for multiple
+          sizes, states, and more.</p>
+        <button type="button" class="btn ">Shop</button>
+      </div> -->
+      <app-slider-text-home [items]=" slide3"></app-slider-text-home>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+    data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+    data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>

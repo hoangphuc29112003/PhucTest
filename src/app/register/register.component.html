@@ -1,0 +1,176 @@
+<div class="row justify-content-center" style="width: 100%; margin: 0;">
+
+
+  <div class="col-12" style="width: 100%;height: 380px;background-color: #F5F5F5; padding: 0;">
+    <div class="titledetail justify-content-center">
+      <h2>Register</h2>
+      <div class="title d-flex justify-content-center">
+        <div routerLink="/home"> Home </div> >
+        <div>Shop </div> >
+        <div style="margin-left: 10px;">Register</div>
+      </div>
+
+    </div>
+
+  </div>
+  <div class="row content" style="min-height: 500px; ">
+
+
+    <div class="">
+      <div class="container">
+        <div class="row clearfix">
+          <div class="column col-lg-6 col-md-12 col-sm-12">
+            <div class="styled-form">
+              <h4>Sign Up</h4>
+              <form action="">
+                <div class="form-group">
+                  <strong> <label for="">Your name</label></strong>
+                  <input [(ngModel)]="users.name" class="input" type="text" name="username" value=""
+                    placeholder="Enter your name*" required="" fdprocessedid="nfwisb">
+                </div>
+                <div class="form-group">
+                  <strong> <label for="">Email Address</label></strong>
+
+                  <input [(ngModel)]="users.email" class="input" type="text" name="username" value=""
+                    placeholder="Enter Email Adress" required="" fdprocessedid="nfwisb">
+                </div>
+                <!-- <app-input [users]="email"  [label]='"Email Address"'[placeholder]="'Enter Email Adress'"  ></app-input> -->
+                <div class="form-group">
+                  <strong><label for="">New Password</label></strong>
+                  <input [(ngModel)]="users.pass" class="input" type="password" name="username" value=""
+                    placeholder="Create password" required="" fdprocessedid="nfwisb">
+                </div>
+                <!-- <app-input [label]='"New Password"'[placeholder]="'Create password'"  ></app-input> -->
+                <div class="form-group">
+                  <input type="checkbox" name="remember-password" id="type-1">
+                  <label for="type-1" style="margin-left: 10px;">
+                    I agree to al
+                    <a href="#">Terms</a>
+                    &
+                    <a href="#">Condition</a>
+                    and Feeds
+                  </label>
+                </div>
+                <div class="form-group">
+                  <button type="button" class="theme-btn btn-style-one" fdprocessedid="lbwmef" (click)="SignUp()">
+                    Sign Up
+                  </button>
+                </div>
+              </form>
+            </div>
+
+          </div>
+          <div class="column col-lg-6 col-md-12 col-sm-12">
+            <div class="styled-form">
+              <h4>Login here</h4>
+              <form action="">
+                <div class="form-group">
+                  <strong> <label for="">Email address</label> </strong>
+                  <input class="input" type="text" name="username" value="" placeholder="Enter Email Adress" required=""
+                    fdprocessedid="nfwisb">
+                </div>
+                <div class="form-group">
+                  <strong> <label for="">New Password</label> </strong>
+                  <input class="input" type="text" name="username" value="" placeholder="Creat Password" required=""
+                    fdprocessedid="nfwisb">
+                </div>
+                <div class="form-group">
+                  <input type="checkbox" name="remember-password" id="type-1">
+                  <label for="type-1" style="margin-left: 10px;">
+                    Remember Me?
+                  </label>
+                </div>
+                <div class="form-group">
+                  <button type="button" class="theme-btn btn-style-one" fdprocessedid="lbwmef">
+                    Login Here
+                  </button>
+
+                </div>
+                <div class="form-group justify-content-center">
+           <label for="" class="">Login with Google</label>
+            <asl-google-signin-button></asl-google-signin-button>
+          </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- <form >
+  <label for="">User ID</label>
+  <input ([ngModel]) = "id" type="text" id="id">
+
+  <label for="">User name</label>
+  <input ([ngModel]) = "name"  type="text" id="name">
+
+  <label for="">Email</label>
+  <input ([ngModel]) = "email"  type="text" id="email">
+</form>
+<button >click</button> -->
+  <!-- <div>
+  <h2>Angular Login with Google</h2>
+  <div>  *ngIf="isLoggedIn === false"
+      <div>
+          <button type="button" (click)="loginWithGoogle()">Login with Google</button>
+      </div>
+      <asl-google-signin-button></asl-google-signin-button>
+      <button type="button" (click)=" signInWithFB()" class="btn btn-primary btn-block">Signin with Facebook</button>
+      <button id="google-signin-button"></button>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h4>About Me</h4>
+       <h3>{{user2.name}}</h3>
+        <h5>Photo of me:</h5>
+        <div class="fakeimg"><img src="{{user2.photoUrl}}"></div>
+       <button (click)="signInWithFB()" class="btn btn-primary">Login Facebook</button>
+     </div>
+    </div>
+  </div>
+  <div *ngIf="isLoggedIn === true">
+      <div class="form-group">
+          <label>First Name</label>
+          <input type="text" [value]="socialUser.firstName" id="firstname" readonly>
+      </div>
+      <br>
+      <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" [value]="socialUser.lastName" id="lastname" readonly>
+      </div>
+      <br>
+      <div class="form-group">
+          <label>Email</label>
+          <input type="text" [value]="socialUser.email" id="email" readonly>
+      </div>
+      <br>
+      <button type="button" (click)="logOut()">Log Out</button>
+  </div>
+</div>
+<div class="card-body">
+  <button class="btn btn-facebook" (click)="login()">
+      <i class="fa fa-facebook mr-1"></i>
+      Login with Facebook
+  </button>
+</div> -->
+
+
+  <!-- <div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div> -->
+  <!-- <div class="container">
+  <img src="{{ user.photoUrl }}">
+  <div>
+    <h4>{{ user.name }}</h4>
+    <p>{{ user.email }}</p>
+  </div>
+
+</div> -->
+
+</div>

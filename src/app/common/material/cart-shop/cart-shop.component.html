@@ -1,0 +1,46 @@
+
+<div  class="card  " style="width: 18rem;margin: 12px;"  >
+  <img  [routerLink]="['/detail',item.id]" src="{{item.img}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <div><h5 class="card-title">{{item.name}}</h5> <h5 class="card-title">ID:{{item.id}}</h5>
+      <p>PRICE: {{item.price}}</p><p>SALE: {{item.pricesSales}}</p><p>CATAGORIES: {{item.catagories}}</p></div>
+
+    <div class="cart d-flex align-items-center">
+<!--
+      <a > <svg   class="dash" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-lg" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z"/>
+      </svg></a> -->
+
+        <!-- <div *ngIf=" getId == item.id">
+          <input class="qty-spinner form-control d-flex-justify-content-center" type="text" value="{{quantity}}" name="quantity" (ngModelChange)="change()" style="display: block; width: 40px; font-size: small;" fdprocessedid="vyv8t"  >
+          {{quantity}}
+        </div> -->
+        <div *ngFor="let i of items" class="d-flex">
+          <div *ngIf="i.id== item.id"  (click)="reduc(i.soluong,item.id)"  ><svg   class="dash" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-lg" viewBox="0 0 16 16" style="margin-top: 10px ;">
+            <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z"/>
+          </svg></div>
+            <input  *ngIf="i.id== item.id"   [(ngModel)]="i.soluong" (ngModelChange)="change(item.id)" min="1" type="" class="form-control " style="width: 40px;"></div>
+
+
+
+        <!-- <div >
+          <input class="qty-spinner form-control d-flex-justify-content-center" type="text" value="{{quantity}}" name="quantity" (ngModelChange)="change()" style="display: block; width: 40px; font-size: small;" fdprocessedid="vyv8t"  >
+      </div> -->
+<!--
+
+      <div *ngFor="let i of items ">
+        <div *ngIf=" i.id == item.id">
+          <div class="card-title">
+            Soluong: {{i.soluong}}
+          </div>
+        </div>
+      </div> -->
+
+      <svg (click)="add()"  class="plus" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16" >
+        <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+      </svg>
+     </div>
+
+  </div>
+  </div>
+

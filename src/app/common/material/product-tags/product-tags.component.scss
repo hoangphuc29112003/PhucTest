@@ -1,0 +1,28 @@
+.tag{
+  margin-top: 10px;
+  margin-right: 10px;
+  display: inline-block;
+  list-style-type:none;
+  min-height: 40px ;
+  min-width: 90px;
+  background-color:#F7F7F7;
+
+  p{
+   // max-width: 95px;
+    opacity: 0.5;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-top: 7px;
+  }
+}
+.tag:hover{
+
+  background-color: rgb(242, 80, 80);
+
+  p{
+    opacity: 10;
+   // max-width: 95px;
+   color: white;
+  }
+}

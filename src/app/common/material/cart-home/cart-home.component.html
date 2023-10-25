@@ -1,0 +1,23 @@
+<div class="card" style="width: 18rem;margin: 12px;">
+  <img [routerLink]="['/detail',item.id]" src="{{item.img}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <div>
+      <h5 class="card-title">{{item.name}}</h5>
+      <h5 class="card-title">ID:{{item.id}}</h5>
+      <p>PRICE: {{item.price}}</p>
+      <p>SALE: {{item.pricesSales}}</p>
+    </div>
+
+    <div class="cart1 d-flex align-items-center">
+
+      <!-- <button (click)="addtocart(item)" > Mua hàng </button> -->
+      <!-- <app-button  (click)="addtocart(item)"  ></app-button> -->
+      <button appBtnDirective  [items]="s"  (click)="addtocart(item)">Mua Hàng</button>
+
+      <!-- <button appBtnDirective  >cc</button> -->
+
+<p ></p>
+    </div>
+
+  </div>
+</div>

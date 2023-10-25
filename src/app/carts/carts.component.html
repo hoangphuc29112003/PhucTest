@@ -1,0 +1,157 @@
+<!-- cart.compoment.html -->
+<!-- cart.compoment.html -->
+
+
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let img of images; let i = index">
+      <img
+        id="img{{ i }}"
+        class="img-fluid"
+        crossOrigin="Anonymous"
+        [src]="img.url"
+      />
+    </div>
+    <div class="col-md-12 mt-3">
+      <button (click)="download()" class="btn btn-primary">Download PDF</button>
+    </div>
+  </div>
+</div>
+
+<table id="table">
+  <tr>
+    <th style="width:300px">Player</th>
+    <th style="width:100px">Span</th>
+    <th style="width:100px">Run</th>
+  </tr>
+  <tr>
+    <td>SR Tendulkar (INDIA)</td>
+    <td>1989-2012</td>
+    <td>18000</td>
+  </tr>
+  <tr>
+    <td>KC Sangakkara (Asia/ICC/SL)</td>
+    <td>2000-2015</td>
+    <td>14234</td>
+  </tr>
+  <tr>
+    <td>RT Ponting (AUS/ICC)</td>
+    <td>1995-2012</td>
+    <td>13704</td>
+  </tr>
+  <tr>
+    <td>ST Jayasuriya (Asia/SL)</td>
+    <td>1989-2011</td>
+    <td>13430</td>
+  </tr>
+</table> -->
+
+
+
+
+
+
+
+
+
+
+
+<div style="width: 100%; padding: 0;">
+  <div class="row" style="width: 100%;height: 380px;background-color:#F5F5F5 ;">
+    <div class="titledetail justify-content-center">
+      <h2>Cart Page</h2>
+      <div class="title d-flex justify-content-center">
+        <div routerLink="/home"> Home </div> >
+        <div style="margin-left: 10px;"> Pages </div> >
+        <div style="margin-left: 10px;">Cart Page</div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="row content" style="margin: 0; margin-bottom: 40px;">
+    <div class="alert alert-warning text-center p-5 h2" *ngIf="items.length==0">
+      Bạn chưa chọn sản phẩm nào
+      <button class="tieptucmuahang" routerLink="/home">TIẾP TỤC MUA HÀNG</button>
+      <td style="margin: auto;" class="text-center" colspan="2"></td>
+    </div>
+
+
+    <div class="row justify-content-center" style="margin-top: 40px;">
+
+
+      <div class="cart-column col-lg-8 col-md-12 col-sm-12 justify-content-center left ">
+        <div class="row">
+          <table id="cart2" class="table table-bordered" style="float: right;" *ngIf="items.length>0">
+            <caption class="h3 continue" routerLink="/home">TIẾP TỤC MUA HÀNG</caption>
+
+            <tr>
+              <th style="margin-right: 50px;"> Sản phẩm</th>
+              <th style="margin-right: 50px;">Giá</th>
+              <th style="margin-right: 50px;">Số lượng</th>
+              <th style="margin-right: 50px;">Thành tiền</th>
+              <th style="margin-right: 50px;">Ngày</th>
+              <th>Xóa</th>
+            </tr>
+            <tr *ngFor="let item of items" id="cc">
+
+              <td> <img src="{{item.img}}" alt="" class="img">
+                <p> {{ item.name |uppercase }}</p>
+              </td>
+
+              <td> {{item.pricesSales| currency:'VND'}}</td>
+              <td><input [(ngModel)]="item.soluong" (ngModelChange)="change()" min="1" type="number" class="form-control"> </td>
+              <td> {{item.pricesSales*item.soluong| currency:'VND'}} </td>
+              <td> {{date | date:'dd/MM/yyyy'}} </td>
+              <td> <button type="button" class="btn btn-danger" (click)="removeItem(item)">Delete</button></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+
+      <div class="total-column col-lg-4 col-md-12 col-sm-12 right">
+
+        <div class="checkout" *ngIf="items.length>0">
+          <div class="class d-flex justify-content-center">
+            <h3>Cart Totals</h3>
+          </div>
+          <div class="total justify-content-center">
+            <div class="row d-flex " style="margin: auto; width: 400px; margin-top: 40px; ">
+              <h6> Tổng số lượng : </h6>
+              <p> {{sumsoluong()}}</p>
+            </div>
+            <hr />
+            <div class="row" style="margin: auto; width: 400px; justify-content: center;">
+              <h6>Tổng tiền : </h6>
+              <p> {{ summonney()| currency:'VND'}} </p>
+            </div>
+
+
+            <div class="row" style="margin: auto; width: 400px; justify-content: center;">
+              <tr>
+                <!-- <td colspan="2">
+                      <button class="tieptucmuahang" routerLink="/home">TIẾP TỤC MUA HÀNG</button> </td> -->
+
+              </tr>
+            </div>
+
+
+          </div>
+          <div class="row">
+            <td colspan="2" style="width: 200px;margin-left: 17px; margin-top: 20px;"> <a class="btn btn-danger w-100"
+                routerLink="/invoice">Thanh toán</a>
+
+            </td>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+
+</div>

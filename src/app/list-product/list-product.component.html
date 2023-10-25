@@ -1,0 +1,142 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body >
+  <div class="row" id="cared">
+
+
+
+    <div class="card-wrapper  d-flex  justify-content-around col-lg-3 col-md-4 col-sm-6 col-xs-12  " *ngFor="let item of Products | paginate
+    : {
+        itemsPerPage: tableSize,
+        currentPage: page,
+        totalItems: count
+      }; let i = index " >
+  <div >
+        <div  [routerLink]="['/detail',item.id]" class="card  " style="width: 18rem;margin: 12px;"  >
+  <img src="{{item.img}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <div><h5 class="card-title">{{item.name}}</h5> <h5 class="card-title">ID: {{item.id}}</h5>
+      <p>PRICE: {{item.price}}</p><p>SALE: {{item.pricesSales}}</p></div>
+
+    <div class="cart d-flex align-items-center">
+     dấu trừ
+
+      <svg  class="dash" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-lg" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z"/>
+      </svg>
+      <input class="qty-spinner form-control" type="text" value="1" name="quantity" style="display: block; width: 35px;" fdprocessedid="vyv8t" >
+      dấu cộng
+      <svg  class="plus" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16" >
+        <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+      </svg>
+     </div>
+
+  </div>
+  </div>
+  </div>
+
+  </div>
+  </div>
+  <div class="row" style="margin-top: 100px;" >
+    <div class="d-flex justify-content-center">
+
+      <pagination-controls
+        previousLabel="Prev"
+        nextLabel="Next"
+        (pageChange)="onTableDataChange($event)"
+      >
+      </pagination-controls>
+    </div>
+  </div>
+
+
+
+
+
+
+
+</body>
+</html> -->
+
+<!-- <section class="swiper nySwiper"></section>
+
+<div id="carouselExampleControls1" class="carousel carousel-dark slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="card-wrapper container-sm d-flex  justify-content-around">
+       hêm ngFor ở đây
+        <div class="card" style="width: 18rem;" *ngFor="let product of Products | slice:(currentPage - 1) * pageSize:currentPage * pageSize;">
+          <img src="{{product.img}}" class="card-img-top" alt="{{product.name}}">
+          <div class="card-body">
+            <h5 class="card-title">{{product.name}}</h5>
+            <h5 class="card-title">{{product.id}}</h5>
+             Thêm các thông tin khác của sản phẩm ở đây
+          </div>
+        </div>
+      </div>
+    </div>
+   Thêm các carousel-item khác ở đây, nếu có
+  </div>
+  <button (click)="onPrev() " class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls1" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden" >Previous</span>
+  </button>
+  <button  (click)="onNext()" class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls1" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div> -->
+
+
+
+
+
+
+
+<div id="carouselExampleControls2" class="row carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner " >
+    <div class="carousel-item active  "  *ngFor="let product of Products.slice(0, 1) ">
+      <div class="card-wrapper container-sm d-flex  justify-content-around">
+        <!-- Thêm ngFor ở đây -->
+        <div class="card" style="width: 18rem;" *ngFor="let product of Products | slice:(currentPage - 1) * pageSize:currentPage * pageSize;">
+          <!-- <img src="{{product.img}}" class="card-img-top" alt="{{product.name}}">
+          <div class="card-body">
+            <h5 class="card-title">{{product.name}}</h5>
+            <h5 class="card-title">{{product.id}}</h5>
+
+          </div> -->
+          <app-cards-slider  [item] = 'product' ></app-cards-slider>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item " *ngFor="let product of Products.slice(1) ">
+      <div class="card-wrapper container-sm d-flex  justify-content-around">
+        <!-- Thêm ngFor ở đây -->
+        <div class="card" style="width: 18rem;" *ngFor="let product of Products | slice:(currentPage - 1) * pageSize:currentPage * pageSize;">
+          <!-- <img src="{{product.img}}" class="card-img-top" alt="{{product.name}}">
+          <div class="card-body">
+            <h5 class="card-title">{{product.name}}</h5>
+            <h5 class="card-title">{{product.id}}</h5>
+
+          </div> -->
+          <app-cards-slider [item] = 'product' ></app-cards-slider>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <button (click)="onPrev() " class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls2" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden" >Previous</span>
+  </button>
+  <button  (click)="onNext()" class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls2" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+

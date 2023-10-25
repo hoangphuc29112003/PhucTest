@@ -1,0 +1,118 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+   <div class="col-md-12">
+      <div class="invoice">
+         <!-- begin invoice-company -->
+         <div class="invoice-company text-inverse f-w-600">
+            <span class="pull-right hidden-print">
+            <a  (click)="exportFile()"  class="btn btn-sm btn-white m-b-10 p-l-5"><i class="fa fa-file t-plus-1 text-danger fa-fw fa-lg"></i> Export as PDF</a>
+            <a onclick="window.print()" class="btn btn-sm btn-white m-b-10 p-l-5"><i class="fa fa-print t-plus-1 fa-fw fa-lg"></i> Print</a>
+            </span>
+            Company Name, Inc
+         </div>
+         <!-- end invoice-company -->
+         <!-- begin invoice-header -->
+         <div class="invoice-header">
+            <div class="invoice-from">
+               <small>from</small>
+               <address class="m-t-5 m-b-5">
+                  <strong class="text-inverse">Twitter, Inc.</strong><br>
+                  Street Address<br>
+                  City, Zip Code<br>
+                  Phone: (123) 456-7890<br>
+                  Fax: (123) 456-7890
+               </address>
+            </div>
+            <div class="invoice-to">
+               <small>to</small>
+               <address class="m-t-5 m-b-5">
+                  <strong class="text-inverse">Company Name</strong><br>
+                  Street Address<br>
+                  City, Zip Code<br>
+                  Phone: (123) 456-7890<br>
+                  Fax: (123) 456-7890
+               </address>
+            </div>
+            <div class="invoice-date">
+               <small>Invoice / {{date | date:'MMM'}}</small>
+               <div class="date text-inverse m-t-5">{{date| date:'mediumDate'}}</div>
+               <div class="invoice-detail">
+                  #0000123DSS<br>
+                  Services Product
+               </div>
+            </div>
+         </div>
+         <!-- end invoice-header -->
+         <!-- begin invoice-content -->
+         <div class="invoice-content">
+            <!-- begin table-responsive -->
+            <div class="table-responsive">
+               <table class="table table-invoice">
+                  <thead>
+                     <tr  >
+
+                        <th class="text-center" width="10%">ID</th>
+                        <th class="text-center" width="20%">PRODUCT NAME</th>
+                        <th class="text-right" width="20%">PRICE</th>
+                        <th class="text-right" width="20%">QUANTITY</th>
+                        <th class="text-right" width="20%">LINE TOTAL</th>
+                        <th class="text-right" width="20%">DAY</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr *ngFor="let item of items">
+
+                        <td class="text-center">{{ item.id  }}</td>
+                        <td class="text-center">{{ item.name |uppercase }}</td>
+                        <td class="text-right">{{item.pricesSales| currency:'VND'}}</td>
+                        <td class="text-right">{{item.soluong}}</td>
+                        <td class="text-right">{{item.pricesSales*item.soluong| currency:'VND'}} </td>
+                          <td class="text-right">{{date | date:'dd/MM/yyyy'}}</td>
+                     </tr>
+
+
+                  </tbody>
+               </table>
+            </div>
+            <!-- end table-responsive -->
+            <!-- begin invoice-price -->
+            <div class="invoice-price">
+               <div class="invoice-price-left">
+                  <div class="invoice-price-row">
+                     <div class="sub-price">
+                        <small>SUBTOTAL</small>
+                        <span class="text-inverse"> {{sumsoluong}}</span>
+                     </div>
+
+
+                  </div>
+               </div>
+               <div class="invoice-price-right">
+                  <small>TOTAL</small> <span class="f-w-600">{{summonney}}</span>
+               </div>
+            </div>
+            <!-- end invoice-price -->
+         </div>
+         <!-- end invoice-content -->
+         <!-- begin invoice-note -->
+         <div class="invoice-note">
+            * Make all cheques payable to [Your Company Name]<br>
+            * Payment is due within 30 days<br>
+            * If you have any questions concerning this invoice, contact  [Name, Phone Number, Email]
+         </div>
+         <!-- end invoice-note -->
+         <!-- begin invoice-footer -->
+         <div class="invoice-footer">
+            <p class="text-center m-b-5 f-w-600">
+               THANK YOU FOR YOUR BUSINESS
+            </p>
+            <p class="text-center">
+               <span class="m-r-10"><i class="fa fa-fw fa-lg fa-globe"></i> matiasgallipoli.com</span>
+               <span class="m-r-10"><i class="fa fa-fw fa-lg fa-phone-volume"></i> T:016-18192302</span>
+               <span class="m-r-10"><i class="fa fa-fw fa-lg fa-envelope"></i> rtiemps@gmail.com</span>
+            </p>
+         </div>
+         <!-- end invoice-footer -->
+      </div>
+   </div>
+</div>

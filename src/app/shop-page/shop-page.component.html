@@ -1,0 +1,179 @@
+
+
+<!-- <div class="row" style="width: 100%;height: 380px;background-color: #F5F5F5;">
+  <div class="titledetail justify-content-center">
+    <h2>Shop Page</h2>
+    <div class="title d-flex justify-content-center" >
+    <div routerLink="/home"> Home </div>     >
+    <div >Pages </div>       >
+    <div  style="margin-left: 10px;" >Shop Pages</div>
+  </div>
+
+  </div>
+
+</div> -->
+<app-header-title [h2]="h2"  [title1]="t1" [title2]="t2"  [title3]="t3"> </app-header-title>
+<div class="row content" >
+<div class=" article col-xl-9 "  >
+  <div class="row showresult" >
+    <div class="col-xl-3 col-12 d-flex justify-content-left resultchild">
+      <strong>Showing 1–12 of 54 results</strong>
+    </div>
+    <div class="col-xl-5 col-12  resultchild">
+        <input type="text" (keyup)="Find()"  [(ngModel)]="find" placeholder="find by Catagories" >
+        <svg style="margin-left: 10px;" class="glass" (click)="Find()"xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+        </svg>
+
+      </div>
+    <div class="col-xl-4 col-12  d-flex justify-content-left resultchild">
+      <div class="form-group">
+        <select class="form-select" aria-label="Default select example">
+          <option>Recently added</option>
+          <option>Added 01</option>
+          <option>Added 02</option>
+          <option>Added 03</option>
+          <option>Added 04</option>
+        </select>
+
+
+
+      </div>
+      <div class="cl "> <ul class=" ">
+        <li>
+           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list-task" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5V3a.5.5 0 0 0-.5-.5H2zM3 3H2v1h1V3z"/>
+            <path d="M5 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM5.5 7a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 4a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9z"/>
+            <path fill-rule="evenodd" d="M1.5 7a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5V7zM2 7h1v1H2V7zm0 3.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5H2zm1 .5H2v1h1v-1z"/>
+          </svg>
+
+        </li>
+        <li >
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-menu-button-fill" viewBox="0 0 16 16">
+            <path d="M1.5 0A1.5 1.5 0 0 0 0 1.5v2A1.5 1.5 0 0 0 1.5 5h8A1.5 1.5 0 0 0 11 3.5v-2A1.5 1.5 0 0 0 9.5 0h-8zm5.927 2.427A.25.25 0 0 1 7.604 2h.792a.25.25 0 0 1 .177.427l-.396.396a.25.25 0 0 1-.354 0l-.396-.396zM0 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V8zm1 3v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2H1zm14-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2h14zM2 8.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0 4a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z"/>
+          </svg>
+        </li>
+      </ul>
+    </div>
+      <div class="cl"></div>
+    </div>
+  </div>
+
+  <div class="row d-flex-justify-content-center showproduct">
+    <div class="alert alert-warning text-center p-5 h2" *ngIf="filterproduct.length==0" >
+      not found
+
+
+    </div>
+    <div class="card-wrapper1  d-flex  justify-content-around col-lg-3 col-md-4 col-sm-6 col-xs-12  " *ngFor="let item of filterproduct | paginate
+    : {
+        itemsPerPage: tableSize1,
+        currentPage: page1,
+
+      }; let i = index  let i2 = index " >
+  <div >
+    <app-cart-shop [item]="item" ></app-cart-shop>
+        <!-- <div  [routerLink]="['/detail',item.id]" class="card  " style="width: 18rem;margin: 12px;"  >
+  <img src="{{item.img}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <div><h5 class="card-title">{{item.name}}</h5> <h5 class="card-title">ID:{{item.id}}</h5>
+      <p>PRICE: {{item.price}}</p><p>SALE: {{item.pricesSales}}</p><p>CATAGORIES: {{item.catagories}}</p></div>
+
+    <div class="cart d-flex align-items-center">
+
+
+      <svg  class="dash" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-lg" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z"/>
+      </svg>
+      <input class="qty-spinner form-control" type="text" value="1" name="quantity" style="display: block; width: 35px;" fdprocessedid="vyv8t" [(ngModel)]="quantity">
+
+      <svg  class="plus" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16" >
+        <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+      </svg>
+     </div>
+
+  </div>
+  </div> -->
+
+  </div>
+
+  </div>
+
+    <router-outlet></router-outlet>
+  </div>
+
+
+  <div class="row d-flex " style="  width: 100%;padding: 0;">
+<!-- phan trang -->
+<div class="row">
+  <div class="d-flex justify-content-center">
+    <pagination-controls
+      previousLabel1="Prev"
+      nextLabel1="Next"
+      (pageChange)="onTableDataChange1($event)"
+
+    >
+
+    </pagination-controls>
+  </div>
+</div>
+  </div>
+
+
+
+</div>
+
+<div class="asside col-md-3">
+  <div class="sidebar widget-content justify-content-left" style="margin-top: 0;">
+    <!-- <div class="" >
+      <h5>Product Catagories
+      </h5>
+      <ul>
+        <li (click)="getpdbyname(c.cataname)"   class="justify-content-left" *ngFor="let c of catagories;" > {{c.cataname}} </li>
+      </ul>
+    </div> -->
+    <app-product-catagories [catagories]="catagories" (getpd)="getpdbyname($event)" ></app-product-catagories>
+    <div class="widget-content">
+     <app-product-color></app-product-color>
+    </div>
+    <div class="widget-content" >
+      <h5>Brand
+      </h5>
+
+      <div class="form-check" *ngFor="let item of brand">
+        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+        <label class="form-check-label" for="defaultCheck1" (click)="getpdbybrand(item.brand)">
+          {{item.brand}}
+        </label>
+
+
+      </div>
+
+
+
+
+    </div>
+    </div>
+    <div class="widget-content">
+      <img class="sidebarimg" src="../assets/images/shopsidebar.png" alt="">
+    </div>
+    <div class="widget-content">
+     <!-- <h5>Tags</h5>
+
+    <ul class="d-flex-justify-content-center">
+      <li class="tag "> <p>Samsung</p></li>
+      <li class="tag"> <p>Nokia</p></li>
+      <li class="tag"> <p>Symphony</p></li>
+      <li class="tag"> <p>Alcatel</p></li>
+      <li class="tag"> <p>Landing</p></li>
+      <li class="tag"> <p>Oppos</p></li>
+      <li class="tag"> <p>Poco X3</p></li>
+      <li class="tag" style="width: 130px;"> <p>I Phone 15 Pro</p></li>
+
+    </ul> -->
+    <app-product-tags></app-product-tags>
+    </div>
+  </div>
+
+
+</div>
